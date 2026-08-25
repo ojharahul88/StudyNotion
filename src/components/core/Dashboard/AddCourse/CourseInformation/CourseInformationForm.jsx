@@ -240,6 +240,16 @@ export default function CourseInformationForm() {
                 {category?.name}
               </option>
             ))}
+          {/* Hardcoded categories in case DB is empty */}
+          {(!courseCategories || courseCategories.length === 0) && (
+            <>
+              <option value="1">Web Development</option>
+              <option value="2">Mobile Development</option>
+              <option value="3">Data Science</option>
+              <option value="4">Machine Learning</option>
+              <option value="5">Artificial Intelligence</option>
+            </>
+          )}
         </select>
         {errors.courseCategory && (
           <span className="ml-2 text-xs tracking-wide text-pink-200">
