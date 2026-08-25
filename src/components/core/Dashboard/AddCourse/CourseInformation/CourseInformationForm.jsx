@@ -221,7 +221,7 @@ export default function CourseInformationForm() {
         )}
       </div>
       {/* Course Category */}
-      {/* <div className="flex flex-col space-y-2">
+      <div className="flex flex-col space-y-2">
         <label className="text-sm text-richblack-5" htmlFor="courseCategory">
           Course Category <sup className="text-pink-200">*</sup>
         </label>
@@ -240,23 +240,12 @@ export default function CourseInformationForm() {
                 {category?.name}
               </option>
             ))}
-          {/* Hardcoded categories in case DB is empty */}
-          {(!courseCategories || courseCategories.length === 0) && (
-            <>
-              <option value="1">Web Development</option>
-              <option value="2">Mobile Development</option>
-              <option value="3">Data Science</option>
-              <option value="4">Machine Learning</option>
-              <option value="5">Artificial Intelligence</option>
-            </>
-          )}
-        </select>
         {errors.courseCategory && (
           <span className="ml-2 text-xs tracking-wide text-pink-200">
             Course Category is required
           </span>
         )}
-      </div> */}
+      </div>
       {/* Course Tags */}
       <ChipInput
         label="Tags"
