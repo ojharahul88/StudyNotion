@@ -240,6 +240,7 @@ export default function CourseInformationForm() {
                 {category?.name}
               </option>
             ))}
+        </select>
         {errors.courseCategory && (
           <span className="ml-2 text-xs tracking-wide text-pink-200">
             Course Category is required
