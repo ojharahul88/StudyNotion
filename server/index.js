@@ -25,12 +25,18 @@ database.connect();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-	cors({
-		origin: "*",
-		credentials: true,
-	})
-);
+// app.use(
+// 	cors({
+// 		origin: "*",
+// 		credentials: true,
+// 	})
+// );
+app.use(cors({
+  origin: "https://study-notion-ro.vercel.app",
+  credentials: true
+}));
+
+
 app.use(
 	fileUpload({
 		useTempFiles: true,
